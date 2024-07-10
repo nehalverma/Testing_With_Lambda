@@ -1,37 +1,176 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>AAR DEMO | AWS CLOUD DEPLOYMENT</title>
-  <style>
-    body {
-      color: #000080;
-      background-color: #FFFFFF;
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-    }
-    
-    h1 {
-      font-size: 500%;
-      font-weight: normal;
-      margin-bottom: 0;
-    }
-    
-    h2 {
-      font-size: 200%;
-      font-weight: normal;
-      margin-bottom: 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blooming Blossoms - Your Flower Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            font-family: 'Lato', sans-serif;
+            background: #f0f8ff;
+            color: #333;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            color: #4a4a4a;
+            padding: 1em;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5em;
+            margin: 0;
+            color: #4a4a4a;
+        }
+
+        nav {
+            background-color: #fad0c4;
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        nav a {
+            color: #4a4a4a;
+            text-decoration: none;
+            margin: 0 1em;
+            font-weight: bold;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://wallpapers.com/images/hd/plain-light-blue-background-1920-x-1080-nd3vdjzjtofvsovw.jpg');
+            background-size: cover;
+            position: relative;
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2em;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 800px;
+            width: 90%;
+        }
+
+        h2 {
+            text-align: center;
+            color: #ff9a9e;
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5em;
+            margin-bottom: 1em;
+        }
+
+        .products {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .product {
+            text-align: center;
+            flex: 1;
+            margin: 0 1em;
+        }
+
+        .product img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .product img:hover {
+            transform: scale(1.1);
+        }
+
+        .product h3 {
+            margin: 0.5em 0;
+            color: #ff9a9e;
+        }
+
+        .butterfly {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-image: url('https://img.icons8.com/emoji/48/000000/butterfly-emoji.png');
+            background-size: cover;
+            animation: float 10s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(15px, -15px) rotate(10deg); }
+            50% { transform: translate(30px, 0) rotate(0deg); }
+            75% { transform: translate(15px, 15px) rotate(-10deg); }
+        }
+
+        footer {
+            background-color: #fad0c4;
+            color: #4a4a4a;
+            text-align: center;
+            padding: 0.5em;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 <body>
-  <div align="center">
-    <img src="https://s3.ap-south-1.amazonaws.com/www.basava.com/aar_logo_final.png" style="max-width: 20%;">
-    <h1>Congratulations!!! </h1>
-      <h2>Welcome to AAR SOURCE| Ram Hemareddy</h2>
-    <h3>This application was deployed using AWS CodeDeploy.</h3>
-    <p>For next steps, read the <a href="http://aws.amazon.com/documentation/codedeploy">AWS CodeDeploy Documentation</a>.</p>
-  </div>
+    <div class="container">
+        <header>
+            <h1>Welcome to Blooming Blossoms</h1>
+            <p>Your one-stop shop for beautiful flowers</p>
+        </header>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#shop">Shop</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <main>
+            <div class="butterfly" style="top: 10%; left: 10%;"></div>
+            <div class="butterfly" style="top: 20%; right: 20%;"></div>
+            <div class="butterfly" style="bottom: 15%; left: 25%;"></div>
+            <div class="butterfly" style="bottom: 25%; right: 15%;"></div>
+            <div class="content">
+                <h2>Our Best Sellers</h2>
+                <div class="products">
+                    <div class="product">
+                        <img src="https://imgcdn.floweraura.com/DSC_0424_1.jpg" alt="Rose Bouquet">
+                        <h3>Rose Bouquet</h3>
+                        <p>$25.00</p>
+                    </div>
+                    <div class="product">
+                        <img src="https://asset.bloomnation.com/c_limit,d_vendor:global:catalog:product:image.png,f_auto,fl_preserve_transparency,q_auto,w_1005/v1708615184/vendor/9099/catalog/product/2/0/20230421051545_file_64421c01a6f9c_64421c130785b.jpeg" alt="Tulip Garden">
+                        <h3>Tulip Garden</h3>
+                        <p>$30.00</p>
+                    </div>
+                    <div class="product">
+                        <img src="https://thumbs.dreamstime.com/b/watercolor-wildlowers-bouquet-hand-painted-sunflower-bouquets-sunfower-flower-arrangement-wedding-invitation-clipart-elements-218945377.jpg?w=768" alt="Sunflower Sunshine">
+                        <h3>Sunflower Sunshine</h3>
+                        <p>$20.00</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 Blooming Blossoms. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
-
